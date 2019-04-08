@@ -102,7 +102,46 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
+
+body {
+  background-color: #737373;
+  color: #fff;
+  font-size: 16px;
+}
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+
+}
+header address a {
+  line-height: 55px;
+  display: block;
+  padding: 0 20px 15px;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+}
+header address a > i {
+  margin-right: 5px;
+}
+/*address a.phone-link:before, address a.mail-link:before {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  margin-top: -8px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+address a.phone-link:before {
+  content: "\f3cd";
+}
+address a.mail-link:before {
+  content: "\f0e0";
+}*/
 
 
 
