@@ -104,6 +104,9 @@ textarea {
 
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+ul li {
+  list-style: none;
+}
 
 body {
   background-color: #737373;
@@ -126,24 +129,24 @@ header address a {
   font-family: "Raleway", sans-serif;
 }
 header address a > i {
-  margin-right: 5px;
+  margin-right: 8px;
 }
-/*address a.phone-link:before, address a.mail-link:before {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  margin-top: -8px;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+header > .top-menu {
+  width: 100%;
+  background-color: #000;
+  padding: 10px 0;
 }
-address a.phone-link:before {
-  content: "\f3cd";
+.top-menu a.logo {
+  display: block;
+  margin: auto;
 }
-address a.mail-link:before {
-  content: "\f0e0";
-}*/
-
-
+.top-menu ul li {
+  display: inline;
+}
+.top-menu ul li a {
+  display: block;
+  padding: 5px 10px;
+}
 
 
 
