@@ -109,7 +109,7 @@ ul li {
 }
 
 body {
-  background-color: #737373;
+  background-color: rgb(78, 75, 75);
   color: #fff;
   font-size: 16px;
 }
@@ -118,13 +118,12 @@ a, a:hover {
   color: inherit;
 }
 
-header {
-
+header address {
+  margin: 0;
 }
 header address a {
-  line-height: 55px;
   display: block;
-  padding: 0 20px 15px;
+  padding: 15px 20px;
   position: relative;
   font-family: "Raleway", sans-serif;
 }
@@ -140,12 +139,27 @@ header > .top-menu {
   display: block;
   margin: auto;
 }
+.top-menu  nav {
+  display: flex;
+  font-family: "Raleway", sans-serif;
+}
+.top-menu ul {
+  margin: 0;
+  padding: 0;
+  align-self: center;  
+}
 .top-menu ul li {
-  display: inline;
+  display: inline-block;
 }
 .top-menu ul li a {
   display: block;
   padding: 5px 10px;
+  font-size: 18px;
+  text-align: center;
+  transition: background-color 0.3s linear;
+}
+.top-menu ul li a:hover {
+  background-color: rgb(78, 75, 75);
 }
 
 
