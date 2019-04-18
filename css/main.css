@@ -120,13 +120,17 @@ a, a:hover {
   text-decoration: none;
   color: inherit;
 }
+a:hover {
+  cursor: pointer;
+}
+
 
 header address {
   margin: 0;
 }
 header address a {
-  display: block;
-  padding: 15px 20px;
+  display: inline-block;
+  padding: 5px 20px;
   position: relative;
   font-size: 14px;
   text-align: center;
@@ -148,11 +152,13 @@ header > .top-menu {
 }
 .top-menu  nav {
   display: flex;
+  position: relative;
 }
 .top-menu ul {
   margin: 0;
   padding: 0;
-  align-self: center;  
+  align-self: center;
+  display: none;
 }
 .top-menu ul li {
   display: inline-block;
@@ -167,6 +173,68 @@ header > .top-menu {
 .top-menu ul li a:hover {
   background-color: rgb(78, 75, 75);
 }
+#menu-hamburger {
+  position: absolute;
+  height: 30px;
+  top: 50%;
+  margin-top: -14px;
+  right: 15px;
+  font-size: 30px;
+  line-height: 30px;
+}
+#menu-hamburger:before {
+  content: "M \00a0 \00a0 \00a0NU";
+  top: 0;
+  left: -14px;
+  position: absolute;
+}
+#menu-hamburger > .bar-button {
+  width: 25px;
+  height: 30px;
+  margin-right: 35px;
+  position: relative;
+}
+#menu-hamburger > .bar-button:hover {
+  cursor: pointer;
+}
+.bar-button > div {
+  position: absolute;
+  height: 2px;
+  background-color: white;
+  width: 25px;
+}
+.bar-button > .top-bar {
+  top: 4px;
+  transition-property: top, transform;
+  transition-duration: 0.3s, 0.3s;
+}
+.bar-button > .middle-bar {
+  top: 0px;
+  margin-top: 14px;
+}
+.bar-button > .bottom-bar {
+  bottom: 4px;
+  transition-property: bottom, transform;
+  transition-duration: 0.3s, 0.3s;
+}
+#menu-hamburger.opened, .bar-button > .middle-bar {
+  transition-property: top, opacity;
+  transition-duration: 0.5s, 0.4s;
+}
+#menu-hamburger.opened > .bar-button > .top-bar {
+  top: 14px;
+  transform: rotate(45deg);
+}
+#menu-hamburger.opened > .bar-button > .bottom-bar {
+  bottom: 14px;
+  transform: rotate(-45deg);
+}
+#menu-hamburger.opened:before,
+#menu-hamburger.opened > .bar-button > .middle-bar {
+  top: 30px;
+  opacity: 0;
+}
+
 header > .banner {
   position: relative;
   background-color: #312f2f;
@@ -209,6 +277,17 @@ header h1 strong {
 }
 
 
+
+
+
+
+
+
+@media (min-width: 993px){
+  .container {
+    max-width: 960px;
+  }
+}
 
 
 
