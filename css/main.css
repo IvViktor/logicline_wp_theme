@@ -158,7 +158,6 @@ header > .top-menu {
   margin: 0;
   padding: 0;
   align-self: center;
-  display: none;
 }
 .top-menu ul li {
   display: inline-block;
@@ -181,6 +180,7 @@ header > .top-menu {
   right: 15px;
   font-size: 30px;
   line-height: 30px;
+  display: none;
 }
 #menu-hamburger:before {
   content: "M \00a0 \00a0 \00a0NU";
@@ -217,7 +217,7 @@ header > .top-menu {
   transition-property: bottom, transform;
   transition-duration: 0.3s, 0.3s;
 }
-#menu-hamburger.opened, .bar-button > .middle-bar {
+#menu-hamburger:before, .bar-button > .middle-bar {
   transition-property: top, opacity;
   transition-duration: 0.5s, 0.4s;
 }
@@ -289,8 +289,37 @@ header h1 strong {
   }
 }
 
-
-
+@media (max-width: 992px){
+  #menu-hamburger {
+    display: block;
+  }
+  .top-menu ul {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    margin-top: 10px;
+    padding-top: 10px;
+    z-index: 10;
+    opacity: 0;
+    transform: rotateX(90deg);
+    transform-origin: center top;
+    transition-property: transform, opacity;
+    transition-duration: 0.5s, 0.5s;
+    transition-delay: 0.1s;
+  }
+  .top-menu ul.opened {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  .top-menu ul li {
+    display: block;
+    background-color: #000;
+  }
+  .top-menu ul li a{
+    padding: 10px;
+  }
+}
 
 
 
