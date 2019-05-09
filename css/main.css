@@ -114,7 +114,9 @@ body {
   background-color: rgb(78, 75, 75);
   color: #fff;
   font-size: 16px;
-  font-family: "Raleway", sans-serif;
+  /*font-family: "Raleway", sans-serif;*/
+  font-family: "Roboto", sans-serif;
+
 }
 a, a:hover {
   text-decoration: none;
@@ -127,13 +129,19 @@ a:hover {
 
 header address {
   margin: 0;
+  text-align: center;
 }
 header address a {
   display: inline-block;
   padding: 5px 20px;
-  position: relative;
   font-size: 14px;
-  text-align: center;
+}
+a.phone-link {
+  font-family: "Arkhip", sans-serif;
+}
+a.mail-link {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
 }
 header address a > i {
   margin-right: 8px;
@@ -142,13 +150,23 @@ header > .top-menu {
   width: 100%;
   background-color: #000;
   padding: 10px 0;
+  position: relative;
+}
+.top-menu.sticky {
+  position: fixed;
+  top: 0;
+  padding: 5px 0;
+  z-index: 100;
 }
 .top-menu a.logo {
   display: inline-block;
+  max-width: 100%;
   margin: auto;
+  transition: max-width 0.3s ease;
 }
 .top-menu a.logo img {
   max-height: 50px;
+  max-width: 100%;
 }
 .top-menu  nav {
   display: flex;
@@ -167,7 +185,7 @@ header > .top-menu {
   padding: 5px 10px;
   font-size: 18px;
   text-align: center;
-  transition: background-color 0.3s linear;
+  /*transition: background-color 0.3s linear;*/
 }
 .top-menu ul li a:hover {
   background-color: rgb(78, 75, 75);
@@ -183,7 +201,7 @@ header > .top-menu {
   display: none;
 }
 #menu-hamburger:before {
-  content: "M \00a0 \00a0 \00a0NU";
+  content: "М \00a0 \00a0 \00a0НЮ";
   top: 0;
   left: -14px;
   position: absolute;
@@ -191,7 +209,7 @@ header > .top-menu {
 #menu-hamburger > .bar-button {
   width: 25px;
   height: 30px;
-  margin-right: 35px;
+  margin-right: 36px;
   position: relative;
 }
 #menu-hamburger > .bar-button:hover {
@@ -204,22 +222,22 @@ header > .top-menu {
   width: 25px;
 }
 .bar-button > .top-bar {
-  top: 4px;
+  top: 3px;
   transition-property: top, transform;
   transition-duration: 0.3s, 0.3s;
 }
 .bar-button > .middle-bar {
   top: 0px;
-  margin-top: 14px;
+  margin-top: 12px;
 }
 .bar-button > .bottom-bar {
-  bottom: 4px;
+  bottom: 6px;
   transition-property: bottom, transform;
   transition-duration: 0.3s, 0.3s;
 }
 #menu-hamburger:before, .bar-button > .middle-bar {
   transition-property: top, opacity;
-  transition-duration: 0.5s, 0.4s;
+  transition-duration: 0.4s, 0.3s;
 }
 #menu-hamburger.opened > .bar-button > .top-bar {
   top: 14px;
@@ -268,7 +286,7 @@ header h1 strong {
   border: 2px solid #fff;
   font-weight: 700;
   font-size: 18px;
-  transition: all 0.3s linear;
+  transition: all 0.1s linear;
 }
 .banner-content a:hover, .banner-content a:focus {
   background-color: #fff;
@@ -276,12 +294,80 @@ header h1 strong {
   cursor: pointer;
 }
 
-
-
-
-
-
-
+.intro-text {
+  background-color: #fff;
+  padding: 40px 0;
+  color: #000;
+}
+.intro-text h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-family: "Arkhip", sans-serif;
+}
+.intro-text p {
+  text-align: justify;
+}
+.intro-text p strong {
+  font-family: "Arkhip", sans-serif;
+}
+ol.steps {
+  list-style: none;
+  counter-reset: steps-counter;
+  padding-left: 0px;
+  margin-bottom: 0;
+}
+ol.steps > li {
+  counter-increment: steps-counter;
+  position: relative;
+  padding: 0 0 20px 50px;
+}
+ol.steps > li:last-child {
+  padding-bottom: 0;
+}
+ol.steps > li:before {
+  position: absolute;
+  left: 5px;
+  top: 0;
+  display: block;
+  height: 35px;
+  width: 35px;
+  content: counter(steps-counter);
+  font-family: "Arkhip", sans-serif;
+  font-size: 16px;
+  line-height: 35px;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 100%;
+  background-color: #fff;
+  z-index: 20;
+}
+ol.steps > li:after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 22px;
+  margin-left: -1px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #000; 
+}
+ol.steps > li:last-child:after {
+  display: none;
+}
+ol.steps > li > h4 {
+  font-family: "Arkhip", sans-serif;
+  font-size: 20px;
+  line-height: 37px;
+  margin-bottom: 10px;
+}
+ol.steps > li > p {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: #4b4b4b;
+}
 
 @media (min-width: 993px){
   .container {
@@ -305,7 +391,7 @@ header h1 strong {
     transform: rotateX(90deg);
     transform-origin: center top;
     transition-property: transform, opacity;
-    transition-duration: 0.5s, 0.5s;
+    transition-duration: 0.4s, 0.3s;
     transition-delay: 0.1s;
   }
   .top-menu ul.opened {
@@ -320,7 +406,125 @@ header h1 strong {
     padding: 10px;
   }
 }
+@media (max-width: 576px){
+  .top-menu a.logo {
+    max-width: 180px;
+  }
+  #menu-hamburger {
+    height: 22px;
+    margin-top: -9px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+  #menu-hamburger > .bar-button {
+    width: 15px;
+    margin-right: 25px;
+    height: 22px;
+  }
+  .bar-button > div {
+    width: 15px;
+  }
+  .bar-button > .top-bar {
+    top: 2px;
+  }
+  .bar-button > .middle-bar {
+    margin-top: 9px;
+  }
+  .bar-button > .bottom-bar {
+    bottom: 4px;
+  }
+  #menu-hamburger:before {
+    left: -8px;
+  }
+  #menu-hamburger.opened > .bar-button > .top-bar {
+    top: 8px;
+  }
+  #menu-hamburger.opened > .bar-button > .bottom-bar {
+    bottom: 12px;
+  }
+}
+/*=========================================================================
+BLOCK OF STICKY TOP MENU STYLES
+=========================================================================*/
+.top-menu.sticky a.logo {
+  max-width: 180px;
+}
+.top-menu.sticky ul {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    margin-top: 10px;
+    padding-top: 10px;
+    z-index: 10;
+    opacity: 0;
+    transform: rotateX(90deg);
+    transform-origin: center top;
+    transition-property: transform, opacity;
+    transition-duration: 0.4s, 0.3s;
+    transition-delay: 0.1s;
+    visibility: hidden;
+}
+.top-menu.sticky ul.opened {
+    display: block;
+    transform: rotateX(0deg);
+    visibility: visible;
+    opacity: 1;
+}
+.top-menu.sticky ul li {
+    display: block;
+    background-color: #000;
+}
+.top-menu.sticky ul li a{
+    padding: 10px;
+}
+.top-menu.sticky #menu-hamburger {
+    display: block;
+}
+.top-menu.sticky #menu-hamburger {
+    height: 22px;
+    margin-top: -9px;
+    font-size: 22px;
+    line-height: 22px;
+}
+.top-menu.sticky #menu-hamburger > .bar-button {
+    width: 15px;
+    margin-right: 25px;
+    height: 22px;
+}
+.top-menu.sticky #menu-hamburger > .bar-button > div {
+    width: 15px;
+}
+.top-menu.sticky #menu-hamburger > .bar-button > .top-bar {
+    top: 2px;
+}
+.top-menu.sticky #menu-hamburger > .bar-button > .middle-bar {
+    margin-top: 9px;
+}
+.top-menu.sticky #menu-hamburger > .bar-button > .bottom-bar {
+    bottom: 4px;
+}
+.top-menu.sticky #menu-hamburger:before {
+    left: -8px;
+}
+.top-menu.sticky #menu-hamburger.opened > .bar-button > .top-bar {
+    top: 8px;
+}
+.top-menu.sticky #menu-hamburger.opened > .bar-button > .bottom-bar {
+    bottom: 12px;
+}
 
+@media (max-width: 576px){
+  .top-menu.sticky a.logo {
+    max-width: 100px;
+  }
+  .top-menu.sticky #menu-hamburger:before {
+    display: none;
+  }
+  .top-menu.sticky #menu-hamburger > .bar-button {
+    margin-right: 0;
+  }
+}
 
 
  /* ==========================================================================
