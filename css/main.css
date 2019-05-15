@@ -304,6 +304,7 @@ header h1 strong {
   text-transform: uppercase;
   margin-bottom: 25px;
   font-family: "Arkhip", sans-serif;
+  font-size: 25px;
 }
 .intro-text p {
   text-align: justify;
@@ -368,6 +369,40 @@ ol.steps > li > p {
   font-weight: 300;
   color: #4b4b4b;
 }
+.advantages-sect {
+  background-color: #000;
+  padding: 40px 0;
+}
+.advantages-sect h3 {
+  font-family: "Arkhip", sans-serif;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 25px;
+}
+.advantage-item {
+  position: relative;
+}
+.advantage-item .advantage-icon {
+  background-image: url('../img/poligon.svg');
+  background-size: cover;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+.advantage-item h4 {
+  font-size: 18px;
+  font-family: "Arkhip", sans-serif;
+}
+.advantage-item p {
+  text-align: justify;
+  font-size: 14px;
+}
+
+/*===============================================
+MEDIA STYLES BLOCK
+===============================================*/
 
 @media (min-width: 993px){
   .container {
