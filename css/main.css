@@ -386,10 +386,12 @@ ol.steps > li > p {
 }
 .advantage-item .advantage-icon {
   background-image: url('../img/poligon.svg');
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 .advantage-item h4 {
   font-size: 18px;
@@ -398,6 +400,33 @@ ol.steps > li > p {
 .advantage-item p {
   text-align: justify;
   font-size: 14px;
+  margin-bottom: 0;
+}
+.advantage-item.item-1 .advantage-text {
+  width: 65%;
+  margin-top: 90px;
+}
+.advantage-item.item-1 .advantage-icon {
+  right: -15px;
+  top: 66px;
+}
+.advantage-item.item-2 .advantage-text {
+  width: 65%;
+  float: right;
+  margin-top: 30px;
+}
+.advantage-item.item-2 .advantage-icon {
+  left: -18px;
+  top: 0;
+}
+.advantage-item.item-3 .advantage-text {
+  width: 65%;
+  float: right;
+  margin-top: 35px;
+}
+.advantage-item.item-3 .advantage-icon {
+  left: -18px;
+  top: 10px;
 }
 
 /*===============================================
