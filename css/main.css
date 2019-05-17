@@ -392,6 +392,16 @@ ol.steps > li > p {
   position: absolute;
   width: 150px;
   height: 150px;
+  line-height: 150px;
+  text-align: center;
+}
+.advantage-item .advantage-icon > img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.advantage-item .advantage-text {
+  opacity: 0;
+  transition: opacity 0.3s ease 0.3s;
 }
 .advantage-item h4 {
   font-size: 18px;
@@ -410,6 +420,9 @@ ol.steps > li > p {
   right: -15px;
   top: 66px;
 }
+.advantage-item.item-1 .advantage-icon > img {
+  width: 60%;
+}
 .advantage-item.item-2 .advantage-text {
   width: 65%;
   float: right;
@@ -419,6 +432,9 @@ ol.steps > li > p {
   left: -18px;
   top: 0;
 }
+.advantage-item.item-2 .advantage-icon > img {
+  width: 50%;
+}
 .advantage-item.item-3 .advantage-text {
   width: 65%;
   float: right;
@@ -427,6 +443,9 @@ ol.steps > li > p {
 .advantage-item.item-3 .advantage-icon {
   left: -18px;
   top: 10px;
+}
+.advantage-item.item-3 .advantage-icon > img {
+  width: 55%;
 }
 
 /*===============================================
