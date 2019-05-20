@@ -9,7 +9,9 @@ $(document).ready(function(){
 		let scrollPosition = $(window).scrollTop()
 	    if (scrollPosition >= topMenuPosition.top) {
 	        $('header > .top-menu').addClass('sticky');
+	        scrollPosition += window.innerHeight*0.75;
 	        if (scrollPosition >= advantagesBlockPosition.top) {
+	        	if ($('.advantages-sect .advantage-item').hasClass('item-visible')) return;
 		        $('.advantages-sect .advantage-item').addClass('item-visible'); 
 		    }
 		    else {

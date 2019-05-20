@@ -402,7 +402,9 @@ ol.steps > li > p {
 }
 .advantage-item .advantage-text {
   opacity: 0;
-  transition: opacity 0.3s ease 0.3s;
+  transition-property: opacity, transform;
+  transition-duration: 0.7s, 0.7s;
+  transition-delay: 0.2s; 
 }
 .advantage-item h4 {
   font-size: 18px;
@@ -416,12 +418,13 @@ ol.steps > li > p {
 .advantage-item.item-1 .advantage-text {
   width: 65%;
   margin-top: 90px;
+  transform: rotateY(90deg);
 }
 .advantage-item.item-1 .advantage-icon {
   right: 35px;
   top: 66px;
   transition-property: opacity, right;
-  transition-duration: 0.3s, 0.5s;
+  transition-duration: 0.7s, 0.9s;
   transition-delay: 0.2s, 0s;
 }
 .advantage-item.item-1.item-visible .advantage-icon {
@@ -436,12 +439,13 @@ ol.steps > li > p {
   width: 65%;
   float: right;
   margin-top: 30px;
+  transform: rotateY(-90deg);
 }
 .advantage-item.item-2 .advantage-icon {
   left: 32px;
   top: -50px;
   transition-property: opacity, left, top;
-  transition-duration: 0.3s, 0.5s, 0.5s;
+  transition-duration: 0.7s, 0.9s, 0.9s;
   transition-delay: 0.2s, 0s, 0s;
 }
 .advantage-item.item-2.item-visible .advantage-icon {
@@ -456,12 +460,13 @@ ol.steps > li > p {
   width: 65%;
   float: right;
   margin-top: 35px;
+  transform: rotateY(-90deg);
 }
 .advantage-item.item-3 .advantage-icon {
   left: 32px;
   top: 60px;
   transition-property: opacity, left, top;
-  transition-duration: 0.3s, 0.5s, 0.5s;
+  transition-duration: 0.7s, 0.9s, 0.9s;
   transition-delay: 0.2s, 0s, 0s;
 }
 .advantage-item.item-3.item-visible .advantage-icon {
@@ -471,6 +476,10 @@ ol.steps > li > p {
 }
 .advantage-item.item-3 .advantage-icon > img {
   width: 55%;
+}
+.advantage-item.item-visible .advantage-text{
+  opacity: 1;
+  transform: rotateY(0deg);
 }
 
 /*===============================================
