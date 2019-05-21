@@ -373,7 +373,7 @@ ol.steps > li > p {
   background-color: #000;
   padding: 40px 0;
 }
-.advantages-sect h3 {
+.advantages-sect h3, .services h3 {
   font-family: "Arkhip", sans-serif;
   text-transform: uppercase;
   font-size: 24px;
@@ -381,30 +381,13 @@ ol.steps > li > p {
   text-align: center;
   font-size: 25px;
 }
+
+/*===============================================
+BLOCK OF STYLES FOR ADVANTAGES BLOCK
+===============================================*/
+
 .advantage-item {
   position: relative;
-}
-.advantage-item .advantage-icon {
-  background-image: url('../img/poligon.svg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  line-height: 150px;
-  text-align: center;
-  opacity: 0;
-}
-.advantage-item .advantage-icon > img {
-  display: inline-block;
-  vertical-align: middle;
-}
-.advantage-item .advantage-text {
-  opacity: 0;
-  transition-property: opacity, transform;
-  transition-duration: 0.7s, 0.7s;
-  transition-delay: 0.2s; 
 }
 .advantage-item h4 {
   font-size: 18px;
@@ -415,72 +398,163 @@ ol.steps > li > p {
   font-size: 14px;
   margin-bottom: 0;
 }
-.advantage-item.item-1 .advantage-text {
-  width: 65%;
-  margin-top: 90px;
-  transform: rotateY(90deg);
+.advantage-item .advantage-icon {
+  background-image: url('../img/poligon.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
 }
-.advantage-item.item-1 .advantage-icon {
-  right: 35px;
-  top: 66px;
-  transition-property: opacity, right;
-  transition-duration: 0.7s, 0.9s;
-  transition-delay: 0.2s, 0s;
-}
-.advantage-item.item-1.item-visible .advantage-icon {
-  right: -15px;
-  top: 66px;
-  opacity: 1;
+.advantage-item .advantage-icon > img {
+  display: inline-block;
+  vertical-align: middle;
 }
 .advantage-item.item-1 .advantage-icon > img {
   width: 60%;
 }
-.advantage-item.item-2 .advantage-text {
-  width: 65%;
-  float: right;
-  margin-top: 30px;
-  transform: rotateY(-90deg);
-}
-.advantage-item.item-2 .advantage-icon {
-  left: 32px;
-  top: -50px;
-  transition-property: opacity, left, top;
-  transition-duration: 0.7s, 0.9s, 0.9s;
-  transition-delay: 0.2s, 0s, 0s;
-}
-.advantage-item.item-2.item-visible .advantage-icon {
-  left: -18px;
-  top: 0;
-  opacity: 1;
-}
 .advantage-item.item-2 .advantage-icon > img {
   width: 50%;
-}
-.advantage-item.item-3 .advantage-text {
-  width: 65%;
-  float: right;
-  margin-top: 35px;
-  transform: rotateY(-90deg);
-}
-.advantage-item.item-3 .advantage-icon {
-  left: 32px;
-  top: 60px;
-  transition-property: opacity, left, top;
-  transition-duration: 0.7s, 0.9s, 0.9s;
-  transition-delay: 0.2s, 0s, 0s;
-}
-.advantage-item.item-3.item-visible .advantage-icon {
-  left: -18px;
-  top: 10px;
-  opacity: 1;
 }
 .advantage-item.item-3 .advantage-icon > img {
   width: 55%;
 }
-.advantage-item.item-visible .advantage-text{
-  opacity: 1;
-  transform: rotateY(0deg);
+@media (max-width: 576px) {
+  .advantage-item h4 {
+    font-size: 20px;
+  }
+  .advantage-item p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
 }
+@media (max-width: 991px) {
+  .advantage-item h4 {
+    text-align: center;
+  }
+  .advantage-item .advantage-icon {
+    margin: 0 auto 20px;
+    transition-property: opacity, transform;
+    transition-duration: 1.5s, 1s;
+    opacity: 0;
+    transform: rotateX(270deg);
+  }
+  .advantage-item.item-visible .advantage-icon {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  .advantage-item .advantage-text {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1.5s;
+  }
+  .advantage-item.item-visible .advantage-text {
+    opacity: 1;
+  }
+  .advantage-item.item-1.item-visible .advantage-icon {
+    transition-delay: 0.1s, 0s;
+  }
+  .advantage-item.item-2.item-visible .advantage-icon {
+    transition-delay: 0.4s, 0.3s;
+  }
+  .advantage-item.item-3.item-visible .advantage-icon {
+    transition-delay: 0.7s, 0.6s;
+  }
+  .advantage-item.item-1.item-visible .advantage-text {
+    transition-delay: 0.1s;
+  }
+  .advantage-item.item-2.item-visible .advantage-text {
+    transition-delay: 0.4s;
+  }
+  .advantage-item.item-3.item-visible .advantage-text {
+    transition-delay: 0.7s;
+  }
+}
+@media (min-width: 992px) {
+  .advantage-item .advantage-icon {
+    position: absolute;
+    opacity: 0;
+  }
+  .advantage-item .advantage-text {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 0.7s, 0.7s;
+    transition-delay: 0.2s; 
+  }
+  .advantage-item.item-1 .advantage-text {
+    width: 65%;
+    margin-top: 90px;
+    transform: rotateY(90deg);
+  }
+  .advantage-item.item-1 .advantage-icon {
+    right: 85px;
+    top: 66px;
+    transition-property: opacity, right;
+    transition-duration: 0.7s, 0.9s;
+    transition-delay: 0.2s, 0s;
+  }
+  .advantage-item.item-1.item-visible .advantage-icon {
+    right: -15px;
+    top: 66px;
+    opacity: 1;
+  }
+
+  .advantage-item.item-2 .advantage-text {
+    width: 65%;
+    float: right;
+    margin-top: 30px;
+    transform: rotateY(-90deg);
+  }
+  .advantage-item.item-2 .advantage-icon {
+    left: 92px;
+    top: -100px;
+    transition-property: opacity, left, top;
+    transition-duration: 0.7s, 0.9s, 0.9s;
+    transition-delay: 0.2s, 0s, 0s;
+  }
+  .advantage-item.item-2.item-visible .advantage-icon {
+    left: -18px;
+    top: 0;
+    opacity: 1;
+  }
+
+  .advantage-item.item-3 .advantage-text {
+    width: 65%;
+    float: right;
+    margin-top: 35px;
+    transform: rotateY(-90deg);
+  }
+  .advantage-item.item-3 .advantage-icon {
+    left: 92px;
+    top: 110px;
+    transition-property: opacity, left, top;
+    transition-duration: 0.7s, 0.9s, 0.9s;
+    transition-delay: 0.2s, 0s, 0s;
+  }
+  .advantage-item.item-3.item-visible .advantage-icon {
+    left: -18px;
+    top: 10px;
+    opacity: 1;
+  }
+
+  .advantage-item.item-visible .advantage-text{
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+/*=====================================================
+END OF BLOCK OF ADVANTAGES STYLES
+=====================================================*/
+
+
+.services {
+  padding: 40px 0;
+  background-color: #fff;
+  color: #000;
+}
+
 
 /*===============================================
 MEDIA STYLES BLOCK
