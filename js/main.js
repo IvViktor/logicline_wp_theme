@@ -22,4 +22,11 @@ $(document).ready(function(){
 	        $('header > .top-menu').removeClass('sticky');
 	    }
 	});
+	$(".owl-carousel").owlCarousel({
+		items: 1,
+		loop: true,
+		touchDrag: true,
+		nav: true,
+		autoplay: true
+	});
 });

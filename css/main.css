@@ -556,10 +556,10 @@ END OF BLOCK OF ADVANTAGES STYLES
 }
 .service-item {
   /*box-shadow: 0 0 10px 0;*/
+  margin: 40px auto;
 }
 .service-item .item-text {
-  /*padding-top: 20px;
-  padding-bottom: 20px;*/
+  /*padding-bottom: 20px;*/
 }
 .service-item h4 {
   text-align: center;
@@ -582,17 +582,20 @@ END OF BLOCK OF ADVANTAGES STYLES
   background-color: #000;
   color: #fff;
 }
-.service-item .item-portfolio {
+.service-item .item-portfolio, .service-item .item-smbusiness {
   position: relative;
-  background-image: url("../img/exmpls/portfolio_bg.jpg");
   background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.service-item .item-portfolio img { 
+.service-item .item-portfolio {
+  background-image: url("../img/exmpls/portfolio_bg.jpg");
+}
+.service-item img.img-observe { 
   position: absolute;
   display: block;
   max-height: 80%;
+  width: auto !important;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px;
 }
@@ -604,6 +607,25 @@ END OF BLOCK OF ADVANTAGES STYLES
   top: 10%;
   right: 10%;
 }
+.service-item .item-smbusiness .item-text {
+  background-color: #fff;
+  text-align: center;
+  /*box-shadow: -10px 0px 30px -10px, 10px 0px 30px -10px;*/
+}
+.service-item .item-smbusiness .side-img {
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: transparent;
+  height: 100%;
+}
+.service-item .item-smbusiness .side-img.img-left {
+  background-image: url("../img/exmpls/smbusiness_1.jpg");
+}
+.service-item .item-smbusiness .side-img.img-right {
+  background-image: url("../img/exmpls/smbusiness_2.jpg");
+}
+
 /*===============================================
 MEDIA STYLES BLOCK
 ===============================================*/
