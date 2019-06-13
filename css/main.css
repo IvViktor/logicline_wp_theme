@@ -582,7 +582,9 @@ END OF BLOCK OF ADVANTAGES STYLES
   background-color: #000;
   color: #fff;
 }
-.service-item .item-portfolio, .service-item .item-smbusiness {
+.service-item .item-portfolio,
+.service-item .item-smbusiness,
+.service-item .item-enterprise {
   position: relative;
   background-position: top left;
   background-repeat: no-repeat;
@@ -590,6 +592,9 @@ END OF BLOCK OF ADVANTAGES STYLES
 }
 .service-item .item-portfolio {
   background-image: url("../img/exmpls/portfolio_bg.jpg");
+}
+.service-item .item-enterprise {
+  background-image: url("../img/exmpls/corp_3.jpg");
 }
 .service-item img.img-observe { 
   position: absolute;
@@ -599,20 +604,24 @@ END OF BLOCK OF ADVANTAGES STYLES
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px;
 }
-.service-item .item-portfolio img.img-1 {
+.service-item .item-portfolio img.img-1,
+.service-item .item-enterprise img.img-1 {
   top: 10%;
   left: 10%;
 }
-.service-item .item-portfolio img.img-2 {
+.service-item .item-portfolio img.img-2,
+.service-item .item-enterprise img.img-2 {
   top: 10%;
   right: 10%;
 }
-.service-item .item-smbusiness .item-text {
+.service-item .item-smbusiness .item-text,
+.service-item .item-ecommerce .item-text {
   background-color: #fff;
   text-align: center;
   /*box-shadow: -10px 0px 30px -10px, 10px 0px 30px -10px;*/
 }
-.service-item .item-smbusiness .side-img {
+.service-item .item-smbusiness .side-img,
+.service-item .item-ecommerce .side-img {
   background-position: top left;
   background-size: cover;
   background-repeat: no-repeat;
@@ -625,7 +634,12 @@ END OF BLOCK OF ADVANTAGES STYLES
 .service-item .item-smbusiness .side-img.img-right {
   background-image: url("../img/exmpls/smbusiness_2.jpg");
 }
-
+.service-item .item-ecommerce .side-img.img-left {
+  background-image: url("../img/exmpls/shop_1.jpg");
+}
+.service-item .item-ecommerce .side-img.img-right {
+  background-image: url("../img/exmpls/shop_3.jpg");
+}
 /*===============================================
 MEDIA STYLES BLOCK
 ===============================================*/
