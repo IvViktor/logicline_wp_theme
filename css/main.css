@@ -640,6 +640,50 @@ END OF BLOCK OF ADVANTAGES STYLES
 .service-item .item-ecommerce .side-img.img-right {
   background-image: url("../img/exmpls/shop_3.jpg");
 }
+
+/*==============================================
+OWL CAROUSEL PLUGIN NAVIGATION STYLES FOR SERVICES SECTION
+===============================================*/
+.services .owl-carousel > .owl-nav > button.owl-prev,
+.services .owl-carousel > .owl-nav > button.owl-next {
+  display: block;
+  color: transparent;
+  position: absolute;
+  height: 50px;
+  width: 15px;
+  top: 50%;
+  margin-top: -25px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  outline: none;
+} 
+.services .owl-carousel > .owl-nav > .owl-prev {
+  right: 100%;
+  margin-right: 10px;
+  background-image: url("../img/angle-left.svg");
+}
+.services .owl-carousel > .owl-nav > .owl-next {
+  left: 100%;
+  margin-left: 10px;
+  background-image: url("../img/angle-right.svg");
+}
+.services .owl-carousel > .owl-dots {
+  text-align: center;
+}
+.services .owl-carousel > .owl-dots button {
+  display: inline-block;
+  margin: 0 7px;
+  width: 40px;
+  height: 7px;
+  background-color: rgba(78, 75, 75, 0.5);
+  outline: none;
+}
+.services .owl-carousel > .owl-dots button.active,
+.services .owl-carousel > .owl-dots button:hover {
+  background-color: #000;
+}
+
 /*===============================================
 MEDIA STYLES BLOCK
 ===============================================*/
