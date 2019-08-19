@@ -369,11 +369,11 @@ ol.steps > li > p {
   font-weight: 300;
   color: #4b4b4b;
 }
-.advantages-sect {
+.advantages-sect, .about-us-sect {
   background-color: #000;
   padding: 40px 0;
 }
-.advantages-sect h3, .services h3 {
+.advantages-sect h3, .services h3, .about-us-sect h3, .portfolio-sect h3 {
   font-family: "Arkhip", sans-serif;
   text-transform: uppercase;
   font-size: 24px;
@@ -549,7 +549,7 @@ END OF BLOCK OF ADVANTAGES STYLES
 =====================================================*/
 
 
-.services {
+.services, .portfolio-sect {
   padding: 40px 0;
   background-color: #fff;
   color: #000;
@@ -683,6 +683,17 @@ OWL CAROUSEL PLUGIN NAVIGATION STYLES FOR SERVICES SECTION
 .services .owl-carousel > .owl-dots button:hover {
   background-color: #000;
 }
+
+
+/*=================================================
+ABOUT COMPANY SECTION STYLES
+=================================================*/
+
+
+/*=================================================
+EXAMPLES SECTION STYLES
+=================================================*/
+
 
 /*===============================================
 MEDIA STYLES BLOCK
