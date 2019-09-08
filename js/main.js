@@ -29,4 +29,11 @@ $(document).ready(function(){
 		nav: true,
 		// autoplay: true
 	});
+	$(".portfolio-sect .owl-carousel").owlCarousel({
+		items: 1,
+		loop: true,
+		touchDrag: true,
+		nav: true,
+		//autoplay: true
+	});
 });

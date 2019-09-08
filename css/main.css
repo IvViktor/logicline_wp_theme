@@ -693,7 +693,25 @@ ABOUT COMPANY SECTION STYLES
 /*=================================================
 EXAMPLES SECTION STYLES
 =================================================*/
-
+.portfolio-page > div:first-child {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.portfolio-item {
+  max-height: 400px;
+  overflow: hidden;
+}
+.portfolio-item:first-child {
+  padding-right: 20px;
+}
+.portfolio-item:last-child {
+  padding-left: 20px;
+}
+.portfolio-item > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 /*===============================================
 MEDIA STYLES BLOCK
